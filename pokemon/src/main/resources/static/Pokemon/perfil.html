@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Perfil - Pokémon</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo-contenedor">
+    <img src="img/logo-pokemon.png" alt="Logo Pokémon" class="logo-pokemon" />
+  </div>
+  <div class="pokeball-boton"></div>
+  <nav id="navbar"></nav>
+</header>
+<script src="js/config.js"></script>
+<script src="js/autenticador.js"></script>
+<!--<script>
+  if (!localStorage.getItem("usuarioEmail")) {
+    window.location.href = "login.html";
+  }
+</script>-->
+
+<main>
+  <p>Nombre: <span id="usuario-nombre"></span></p>
+  <p>Email: <span id="usuario-email"></span></p>
+
+  <h3>Pokémons favoritos</h3>
+  <div id="lista-favoritos"></div>
+  <button id="btn-logout" type="button">Cerrar sesión</button>
+</main>
+
+<script src="js/nav.js" defer></script>
+
+
+<script src="js/perfil.js" defer></script>
+
+</body>
+</html>

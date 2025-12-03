@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registro - Pokémon</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header>
+  <h1>Pokémon</h1>
+</header>
+<script src="js/config.js"></script>
+<script src="js/autenticador.js" defer></script>
+<main>
+  <h2>Crear cuenta</h2>
+  <form id="form-registro">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" required />
+
+    <label for="email-registro">Email</label>
+    <input type="email" id="email-registro" required />
+
+    <label for="password-registro">Contraseña</label>
+    <input type="password" id="password-registro" required />
+
+    <button type="submit">Registrarse</button>
+    <p id="mensaje-registro" class="mensaje"></p>
+
+    <button type="button" id="btn-ir-a-login" class="boton-secundario">
+    ¿Ya tienes cuenta? Inicia sesión aquí
+  </button>
+  </form>
+  <script>
+  document.getElementById("btn-ir-a-login").addEventListener("click", () => {
+    window.location.href = "login.html";
+  });
+  </script>
+</main>
+
+</body>
+</html>

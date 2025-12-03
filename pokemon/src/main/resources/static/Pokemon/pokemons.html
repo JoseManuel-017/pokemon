@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pokemons - Pokémon</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo-contenedor">
+    <img src="img/logo-pokemon.png" alt="Logo Pokémon" class="logo-pokemon" />
+  </div>
+  <div class="pokeball-boton"></div>
+  <nav id="navbar"></nav>
+</header>
+<script src="js/config.js"></script>
+<script src="js/autenticador.js" defer></script>
+<!--<script>
+  if (!localStorage.getItem("usuarioEmail")) {
+    window.location.href = "login.html";
+  }
+</script>-->
+
+<main>
+  <h2>Pokédex</h2>
+  <p>Explora diferentes Pokémon y su información básica.</p>
+  <div id="lista-pokemons" class="grid-pokemons"></div>
+</main>
+
+
+<script src="js/nav.js" defer></script>
+<script src="js/pokemons.js" defer></script>
+
+</body>
+</html>
