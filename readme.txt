@@ -27,3 +27,26 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 # Configuración de Hibernate/JPA (opcional, pero útil)
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
+
+
+version: '3.8'
+services:
+  # Servicio de tu Aplicación Web (Frontend/Backend)
+  app:
+    build:
+      context: ./pokemon # Correcto: Apunta a la carpeta 'pokemon'
+      dockerfile: Dockerfile
+    # CLAVE 1: Cambia el nombre del contenedor a algo descriptivo (ej. 'app-pokemon')
+    container_name: Pokemon-Frontend 
+    ports:
+      - "8080:80" # Mapea el puerto de tu aplicación (ajusta si es necesario)
+    environment:
+      # ** VARIABLES DE ENTORNO PARA LA CONEXIÓN **
+      # CLAVE: HOSTNAME: 'mysql-server' (nombre del contenedor MySQL existente)
+      DB_HOST: mysql-server2
+      DB_PORT: 3306
+      DB_USER: root # Usas 'root' en MySQL Workbench
+      DB_PASSWORD: Doc-SecApp24 # Contraseña de tu DB
+      DB_NAME: PokemonCompani # Nombre de tu base de datos
+    # CLAVE 2: Elimina la línea 'networks: - default' si no vas a usar el servicio 'db'. 
+    # Docker Compose intentará usar la red por defecto del proyecto 'dockerproyect' automáticamente.
